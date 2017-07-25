@@ -13,18 +13,20 @@ class App extends React.Component {
 
   componentWillMount() {
     console.log('componentWillMount')
+    this.setState({ m: 2 })
   }
 
+  render() {
+    console.log('render')
+    return <button onClick={this.update}>{this.state.val * this.state.m}</button>
+  }
   componentDidMount() {
     console.log('componentDidMount')
+    console.log(ReactDOM.findDOMNode(this))
   }
 
   compontnWillUnmount() {
     console.log('componentWillUnmount')
-  }
-  render() {
-    console.log('render')
-    return <button onClick={this.update}>{this.state.val}</button>
   }
 }
 
