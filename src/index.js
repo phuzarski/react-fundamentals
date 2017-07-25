@@ -3,5 +3,5 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 ReactDOM.render(
-  <App />,
+  <App cat={5}/>,
   document.getElementById('root'));
